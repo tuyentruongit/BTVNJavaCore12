@@ -6,21 +6,18 @@ public class Exercise8 {
         String str1 = new Scanner(System.in).nextLine();
         System.out.println("Nhập chuỗi kí tự S2");
         String str2 = new Scanner(System.in).nextLine();
-        int count = 0 ;
-        int i = 0;
-        int j = 0;
-        while (i<str1.length()){
-            while (j<str2.length()){
-                if (str1.charAt(i)==str2.charAt(j)){
-                    j++;
-                    count = j -i;
+        int count = -1;
+        for (int i = 0; i <= str2.length() - str1.length(); i++) {
+            boolean find = true;
+            for (int j = 0; j < str1.length(); j++) {
+                if (str2.charAt(i + j) != str1.charAt(j)) {
+                    find = false;
                     break;
-                } else if (str1.charAt(i)!=str2.charAt(j)) {
-                    j++;
-                    count=-1;
                 }
             }
-            i++;
+            if (find) {
+               count=i;
+            }
         }
        if (count!=-1){
            System.out.println("S1 xuất hiện ở vị trí thứ " + count + " của chuỗi S2");
