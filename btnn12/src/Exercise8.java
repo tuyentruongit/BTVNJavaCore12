@@ -23,7 +23,7 @@ public class Exercise8 {
            System.out.println("S1 xuất hiện ở vị trí thứ " + count + " của chuỗi S2");
            return;
        }
-        System.out.println("S1 không xuất hiện trong mảng "+ count);
+        System.out.println("S1 không xuất hiện trong chuỗi S2 ");
 
     }
 }

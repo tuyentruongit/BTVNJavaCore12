@@ -3,6 +3,10 @@ import java.util.StringTokenizer;
 
 public class Exercise3 {
     public static void main(String[] args) {
+       input();
+    }
+
+    private static void input() {
         System.out.println("Nhập chuỗi bất kì");
         String input = new Scanner(System.in).nextLine().trim().replaceAll("\\s+", " ");;
         String[] str = input.split(" ");
@@ -14,11 +18,10 @@ public class Exercise3 {
                     stringBuilder.append(Character.toUpperCase(c));
                 }
                 if (j!=0) {
-                        stringBuilder.append(Character.toLowerCase(c));
+                    stringBuilder.append(Character.toLowerCase(c));
                 }
             }
             stringBuilder.append(" ");
-
         }
         System.out.println(stringBuilder);
     }
